@@ -1,0 +1,140 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #b52f2f;
+    margin-left: 30px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+h3{
+    text-align: center;
+    color: rgb(249, 144, 6);
+    font-weight: bolder;
+    font-size: xx-large;
+}
+
+.chat {
+    border-radius: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.msg {
+    background-color: rgb(80, 139, 197);
+    color: white;
+    padding: 5px 15px;
+    border-radius: 16px;
+    margin-top: 10px;
+    animation: slideIn 0.5s ease-in-out;
+    transition: transform 0.3s, background-color 0.3s;
+}
+
+.msg:hover {
+    transform: scale(1.05);
+    background-color: deepskyblue;
+}
+
+.btn {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s, box-shadow 0.3s;
+    font-size: 16px;
+}
+
+button:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.deletebtn {
+    background-color: tomato;
+    animation: fadeInDelete 1s ease-in-out;
+}
+
+.editbtn {
+    background-color: rgb(148, 96, 197);
+    animation: fadeInEdit 1s ease-in-out;
+}
+
+form {
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 300px;
+}
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 100%;
+}
+
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInDelete {
+    0% {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes fadeInEdit {
+    0% {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
